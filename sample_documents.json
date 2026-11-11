@@ -1,0 +1,19 @@
+[
+  {
+    "_id": "sample-order-001",
+    "source": "sql_sales",
+    "sale_id": 1,
+    "customer_id": 1,
+    "customer_name": "Example customer",
+    "order_date": "2026-01-15T10:30:00Z",
+    "items": [
+      {
+        "product_id": 1,
+        "name": "Example product",
+        "quantity": 2,
+        "unit_price": 24.99
+      }
+    ],
+    "status": "completed"
+  }
+]

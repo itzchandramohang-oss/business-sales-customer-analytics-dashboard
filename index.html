@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Business Sales &amp; Customer Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  </head>
+  <body>
+    <main class="dashboard">
+      <header class="dashboard-header">
+        <p class="eyebrow">Business analytics</p>
+        <h1>Sales &amp; customer dashboard</h1>
+        <p class="subtitle">An overview of your business performance.</p>
+      </header>
+      <section class="metrics" aria-label="Business metrics">
+        <article class="metric-card">
+          <h2>Total revenue</h2>
+          <p class="metric-value">${{ "%.2f"|format(metrics.total_revenue) }}</p>
+        </article>
+        <article class="metric-card">
+          <h2>Total orders</h2>
+          <p class="metric-value">{{ metrics.total_orders }}</p>
+        </article>
+        <article class="metric-card">
+          <h2>Unique customers</h2>
+          <p class="metric-value">{{ metrics.unique_customers }}</p>
+        </article>
+      </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}" defer></script>
+  </body>
+</html>
